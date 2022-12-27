@@ -12,7 +12,7 @@ do
   REAL_DLL="$BloonsTD6/MelonLoader/Il2CppAssemblies/$dll"
   STRIPPED_DLL="./$dll"
   
-  deepstrip "$REAL_DLL" "$STRIPPED_DLL"
+  deepstrip "$REAL_DLL" "$STRIPPED_DLL" || cp "$REAL_DLL" "$STRIPPED_DLL"
   echo Deep stripped "$REAL_DLL to $STRIPPED_DLL"
 done
 

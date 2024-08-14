@@ -4,7 +4,7 @@ cd "$(dirname "$0")" || exit
 dotnet tool install --global DeepStrip
 PATH=$PATH:~/.dotnet/tools
 
-BloonsTD6=$(< ../btd6.targets sed -En 's:.*<BloonsTD6>(.*)</BloonsTD6>.*:\1:p')
+BloonsTD6=$(< ../btd6.targets sed -En 's:.*>(.*)</BloonsTD6>.*:\1:p')
 DLLS=$(< ../btd6.targets sed -En 's:.*Reference Include="\$\(Il2CppAssemblies\)\\(.*\.dll)".*:\1:p')
 
 for dll in $DLLS

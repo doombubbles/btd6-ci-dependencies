@@ -1,3 +1,4 @@
 @echo off
 cd /D "%~dp0"
-.\LaunchUtils\busybox-sh.bat .\update.sh %*
+.\LaunchUtils\busybox64.exe bash .\update.sh %*
+exit /b %errorlevel%
